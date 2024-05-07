@@ -1,4 +1,7 @@
-let URL = "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=a8413cba25605a4ae619a572d1557fb5";
+let zip = "34787";
+
+
+let URL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zip + "&appid=" + apiKey;
 
 fetch(URL)
     .then(function (response) {
@@ -6,6 +9,4 @@ fetch(URL)
     }).then(function (data) {
         console.log(data);
         console.log("This is the humidity: " + data.main.humidity + "%");
-    })
-
-console.log(URL);
+    });
