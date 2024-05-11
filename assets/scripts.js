@@ -1,11 +1,14 @@
 // Get HTML elements
 const input = document.getElementById("inputField");
+const select = document.getElementById("countries")
 const button = document.getElementById("submitBtn");
 
 // Function to get the zip code from the HTML input
 button.onclick = function getZip() { 
     let zipCode = input.value;
-    console.log(zipCode)
+    let countryCode = select.value;
+    console.log(countryCode);
+    console.log(zipCode);
     getWeather(zipCode);
     input.value = "";
 }
