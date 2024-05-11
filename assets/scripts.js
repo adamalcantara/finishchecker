@@ -7,16 +7,26 @@ const button = document.getElementById("submitBtn");
 button.onclick = function getZip() { 
     let zipCode = input.value;
     let countryCode = select.value;
+
+    // Log the results in the console
     console.log(countryCode);
     console.log(zipCode);
-    getWeather(zipCode);
+
+    let result = zipCode + "," + countryCode;
+    console.log(result);
+
+    // Call the function to get the weather
+    getWeather(result);
+
+    // Set the value of the input and select to the default
     input.value = "";
+    select.value = "";
 }
 
 // Function to get the weather statistics
-function getWeather(zipCode) {
-    console.log("This is the test: " + zipCode);
-    let URL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "&appid=" + apiKey;
+function getWeather(result) {
+    console.log("This is the test: " + result);
+    let URL = "https://api.openweathermap.org/data/2.5/weather?zip=" + result + "&appid=" + apiKey;
     
     fetch(URL)
         .then(function (response) {
