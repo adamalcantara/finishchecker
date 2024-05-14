@@ -12,6 +12,7 @@ button.onclick = function getZip() {
     console.log(countryCode);
     console.log(zipCode);
 
+    // Concatinate the zip code and country code with a comma to follow the formatting
     let result = zipCode + "," + countryCode;
     console.log(result);
 
