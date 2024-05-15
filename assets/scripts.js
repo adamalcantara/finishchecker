@@ -8,6 +8,9 @@ button.onclick = function getZip() {
     let zipCode = input.value;
     let countryCode = select.value;
 
+    if (zipCode === "" || countryCode === "") {
+        console.log("Fields cannot be left blank")
+    } else {
     // Log the results in the console
     console.log(countryCode);
     console.log(zipCode);
@@ -22,6 +25,7 @@ button.onclick = function getZip() {
     // Set the value of the input and select to the default
     input.value = "";
     select.value = "";
+    }
 }
 
 // Function to get the weather statistics
