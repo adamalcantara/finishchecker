@@ -38,6 +38,6 @@ function getWeather(result) {
             return response.json()
         }).then(function (data) {
             console.log(data);
-            console.log("This is the humidity: " + data.main.humidity + "%");
+            console.log("This is the humidity in " + data.name + ": " + data.main.humidity + "%");
         });
 }
