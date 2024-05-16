@@ -6,11 +6,15 @@ const infoSection = document.getElementById("informationSection");
 
 // Function to get the zip code from the HTML input
 button.onclick = function getZip() { 
+    infoSection.innerHTML = "";
     let zipCode = input.value;
     let countryCode = select.value;
 
     if (zipCode === "" || countryCode === "") {
         console.log("Fields cannot be left blank");
+        let validation = document.createElement("p");
+        validation.append("Fields cannot be left blank");
+        infoSection.append(validation);
     } else {
     // Log the results in the console
     console.log(countryCode);
