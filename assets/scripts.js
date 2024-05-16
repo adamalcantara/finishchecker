@@ -2,6 +2,7 @@
 const input = document.getElementById("inputField");
 const select = document.getElementById("countries")
 const button = document.getElementById("submitBtn");
+const infoSection = document.getElementById("informationSection");
 
 // Function to get the zip code from the HTML input
 button.onclick = function getZip() { 
@@ -9,7 +10,7 @@ button.onclick = function getZip() {
     let countryCode = select.value;
 
     if (zipCode === "" || countryCode === "") {
-        console.log("Fields cannot be left blank")
+        console.log("Fields cannot be left blank");
     } else {
     // Log the results in the console
     console.log(countryCode);
