@@ -9,28 +9,38 @@
     <title>Finish Checker</title>
 </head>
 <body>
-    <form action="/action_page.php">
-        <select name="countries" id="countries">
-            <option value="">Please select a country</option>
-            <option value="af">Afghanistan</option>
-            <option value="al">Albania</option>
-            <option value="dz">Algeria</option>
-            <option value="as">American Samoa</option>
-            <option value="ad">Andorra</option>
-            <option value="ao">Angola</option>
-            <option value="ai">Anguilla</option>
-            <option value="aq">Antarctica</option>
-            <option value="ca">Canada</option>
-            <option value="us">United States</option>
-            <option value="gb">United Kingdom</option>
-        </select>
-    </form>
+    <!-- Logo -->
+    <img src="./assets/logo.png" alt="Finish Checker Logo" id="logo">
+    
+    <!-- Box for the form -->
+    <div id="infoBox">
+        <!-- Country selection dropdown -->
+        <form action="/action_page.php">
+            <select name="countries" id="countries">
+                <option value="">Please select a country</option>
+                <option value="af">Afghanistan</option>
+                <option value="al">Albania</option>
+                <option value="dz">Algeria</option>
+                <option value="as">American Samoa</option>
+                <option value="ad">Andorra</option>
+                <option value="ao">Angola</option>
+                <option value="ai">Anguilla</option>
+                <option value="aq">Antarctica</option>
+                <option value="ca">Canada</option>
+                <option value="us">United States</option>
+                <option value="gb">United Kingdom</option>
+            </select>
+        </form>
+    
+        <!-- Zip Code entry -->
+        <input type="text" id="inputField" placeholder="Please enter a ZIP code">
 
-    <input type="text" id="inputField" placeholder="Please enter a ZIP code">
-    <button id="submitBtn">Submit</button>
-
-    <div id="informationSection">
-        
+        <!-- Submit button -->
+        <button id="submitBtn">Submit</button>
+    
+        <div id="informationSection">
+            
+        </div>
     </div>
 
     <!-- Scripts -->
