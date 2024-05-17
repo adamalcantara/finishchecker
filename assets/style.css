@@ -34,6 +34,23 @@ body {
     font-size: 20px;
 }
 
+#submitBtn:hover {
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+}
+
 #informationSection {
     font-size: 30px;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        background-position: center 0;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    #infoBox {
+        width: 75%;
+    }
 }
