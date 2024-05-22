@@ -16,7 +16,7 @@ body {
 }
 
 #infoBox {
-    width: 25%;
+    width: 40%;
     background-color: rgba(228, 228, 228, 0.666);
     display: flex;
     flex-direction: column;
@@ -48,6 +48,13 @@ body {
 #informationSection {
     font-size: 30px;
     text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1400px) {
+    #infoBox {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
