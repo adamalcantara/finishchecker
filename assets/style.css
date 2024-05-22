@@ -27,16 +27,21 @@ body {
     border-radius: 20px;
 }
 
+#countries, #inputField {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
 #submitBtn {
     border: none;
-    background-color: grey;
+    background-color: rgb(74, 74, 74);
     color: white;
     font-size: 20px;
 }
 
 #submitBtn:hover {
-    background-color: white;
-    color: grey;
+    background-color: rgb(208, 208, 208);
+    color: rgb(36, 36, 36);
     cursor: pointer;
 }
 
