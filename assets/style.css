@@ -42,6 +42,7 @@ body {
 
 #informationSection {
     font-size: 30px;
+    text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -52,5 +53,11 @@ body {
     }
     #infoBox {
         width: 75%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #informationSection p {
+        font-size: 20px;
     }
 }

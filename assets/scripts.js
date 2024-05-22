@@ -4,6 +4,14 @@ const select = document.getElementById("countries")
 const button = document.getElementById("submitBtn");
 const infoSection = document.getElementById("informationSection");
 
+// Run the getZip function using the Enter key if pressed
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        button.click();
+    }
+})
+
 // Function to get the zip code from the HTML input
 button.onclick = function getZip() { 
     infoSection.innerHTML = "";
@@ -48,7 +56,7 @@ function getWeather(result) {
             // Check if any data is returned
             if (data.cod === '404') {
                 console.log("Error thrown");
-                p.append("City not found. Please try again.");
+                p.append("City not found. Please try again.")
             } else {
                 console.log(data);
                 console.log("This is the humidity in " + data.name + ": " + data.main.humidity + "%");
