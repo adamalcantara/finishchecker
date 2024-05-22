@@ -42,26 +42,37 @@ function getWeather(result) {
         .then(function (response) {
             return response.json()
         }).then(function (data) {
-            console.log(data);
-            console.log("This is the humidity in " + data.name + ": " + data.main.humidity + "%");
-
-            // Declare variables using the data
-            let cityName = data.name;
-            let humidity = data.main.humidity;
-
+            // Create p tag and append it to the info section
             let p = document.createElement("p");
-            p.append("The humidity in " + cityName + " is: " + humidity + "%");
             infoSection.append(p);
-
-            // Create an element for the determination
-            let determination = document.createElement ("p");
-
-            // Verify whether or not the conditions are correct for spraying material
-            if (humidity >= 65) {
-                determination.append("Conditions are not suitable for spraying");
+            // Check if any data is returned
+            if (data.cod === '404') {
+                console.log("Error thrown");
+                p.append("City not found. Please try again.");
             } else {
-                determination.append("Conditions are suitable for spraying");
+                console.log(data);
+                console.log("This is the humidity in " + data.name + ": " + data.main.humidity + "%");
+    
+                
+                // Declare variables using the data
+                let cityName = data.name;
+                let humidity = data.main.humidity;
+    
+                // Append data to p tag created above
+                p.append("The humidity in " + cityName + " is: " + humidity + "%");
+                
+    
+                // Create an element for the determination
+                let determination = document.createElement ("p");
+    
+                // Verify whether or not the conditions are correct for spraying material
+                if (humidity >= 65) {
+                    determination.append("Conditions are not suitable for spraying");
+                } else {
+                    determination.append("Conditions are suitable for spraying");
+                }
+                infoSection.append(determination);
             }
-            infoSection.append(determination);
+
         });
 }
