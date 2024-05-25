@@ -35,7 +35,7 @@ body {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: green;
+    color: purple;
 }
 
 #countries, #inputField {
@@ -90,5 +90,8 @@ body {
 @media screen and (max-width: 780px) {
     #informationSection p, #header {
         font-size: 20px;
+    }
+    #logo {
+        width: 90%;
     }
 }
