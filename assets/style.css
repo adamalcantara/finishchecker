@@ -35,25 +35,42 @@ body {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
-    color: purple;
+
 }
 
 #countries, #inputField {
     font-size: 15px;
     margin-bottom: 15px;
+    padding: 5px;
+}
+
+#countryDropdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#countries, #formLine2 {
+    width: 50%;
+}
+
+#formLine2 {
+    display: flex;
+    flex-direction: row;
 }
 
 #inputField {
-    padding: 5px;
+    width: 100%;
 }
 
 #submitBtn {
     border: none;
-    border-radius: 10px;
     background-color: rgb(74, 74, 74);
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     padding: 5px 10px;
+    margin-left: 10px;
+    height: 33px;
 }
 
 #submitBtn:hover {
@@ -93,5 +110,9 @@ body {
     }
     #logo {
         width: 90%;
+    }
+
+    #countries, #formLine2 {
+        width: 80%;
     }
 }
