@@ -5,9 +5,6 @@ Spraying nitrocellulose finishes for guitar building requires humidity levels to
 
 Finish Checker is a responsive application built using HTML, CSS, and JavaScript. It also uses weather data from the Open Weather API. The functionality includes form validation to ensure that the user has filled out the form correctly.
 
-<img src="./1.png">
-<img src="./2.png">
-
 # Contact
 If you have questions about anything relating to the code, please contact me: 
 
